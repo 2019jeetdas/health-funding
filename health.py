@@ -1,0 +1,100 @@
+# -*- coding: utf-8 -*-
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import random
+import pandas
+
+
+df = pd.read_csv("C:/Users/Jeet Das/Desktop/health.csv",encoding="utf-8")
+
+print("\n----------------------- output data :---------------------\n")
+print("Project - 16 : Funding For Health In Eleventh Plan - Core And Broad Health Components ");
+print("\n------------------------------------------------------------\n")
+
+
+# Question – A : get row and column numbers 
+
+print('---------------------------------------------')
+print("Dimension of the data frame = ",df.shape)
+print('---------------------------------------------')
+
+# Question – B : print column names :
+
+print('------------------------\n Column names as follows :')
+print('------------------------\n')
+count = 0
+for col in df.columns: 
+        print(count,"-->",col)
+        count = count+1
+print("\n-----------------------------\n")
+
+# Question - C : print available financial years
+
+# Question - D : Funding for Core health
+
+# Question - E : GDP % for core health
+
+df1 = df['Centre % GDP (Core Health)']
+df2 = df['States % GDP (Core Health)']
+df3 = df['Total % GDP  (Core Health)']
+
+plt.title('Question - E : GDP % for core health')
+plt.xlabel("year sl. no. --- >")
+plt.ylabel("Numbers --- >")
+    
+plt.plot(df1,
+            marker=4,
+            markersize=10,
+            linestyle='dashed',
+            label="[1] Centre % GDP (Core Health)")
+
+plt.plot(df2,
+            marker=5,
+            markersize=10,
+            linestyle='dashed',
+            label="[2] States % GDP (Core Health)")
+            
+plt.plot(df3,
+            marker=6,
+            markersize=10,
+            linestyle='dashed',
+            label="[3] Total % GDP  (Core Health)")            
+          
+plt.legend()
+plt.show()
+
+
+
+# Question - F : GDP % for Broad Health
+
+df4 = df['Centre % GDP (Broad Health)']
+df5 = df['States % GDP (Broad Health)']
+df6 = df['Total % GDP (Broad Health)']
+
+plt.title('Question - F : GDP % for Broad Health')
+plt.xlabel("year sl. no. --- >")
+plt.ylabel("Numbers --- >")
+    
+plt.plot(df4,
+            marker=4,
+            markersize=10,
+            linestyle='dashed',
+            label="[1] Centre % GDP (Broad Health)")
+
+plt.plot(df5,
+            marker=5,
+            markersize=10,
+            linestyle='dashed',
+            label="[2] States % GDP (Broad Health)")
+            
+plt.plot(df6,
+            marker=6,
+            markersize=10,
+            linestyle='dashed',
+            label="[3] Total % GDP (Broad Health)")            
+          
+plt.legend()
+plt.show()
+
+
