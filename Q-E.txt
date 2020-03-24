@@ -1,0 +1,30 @@
+# Question - E : GDP % for core health
+
+df1 = df['Centre % GDP (Core Health)']
+df2 = df['States % GDP (Core Health)']
+df3 = df['Total % GDP  (Core Health)']
+
+plt.title('Question - E : GDP % for core health')
+plt.xlabel("year sl. no. --- >")
+plt.ylabel("Numbers --- >")
+    
+plt.plot(df1,
+            marker=4,
+            markersize=10,
+            linestyle='dashed',
+            label="[1] Centre % GDP (Core Health)")
+
+plt.plot(df2,
+            marker=5,
+            markersize=10,
+            linestyle='dashed',
+            label="[2] States % GDP (Core Health)")
+            
+plt.plot(df3,
+            marker=6,
+            markersize=10,
+            linestyle='dashed',
+            label="[3] Total % GDP  (Core Health)")            
+          
+plt.legend()
+plt.show()
