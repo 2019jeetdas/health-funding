@@ -1,0 +1,26 @@
+# Question – B : print column names :
+
+print('------------------------\n Column names as follows :')
+print('------------------------\n')
+count = 0
+for col in df.columns: 
+        print(count,"-->",col)
+        count = count+1
+print("\n-----------------------------\n")
+
+------------------------
+ Column names as follows :
+------------------------
+
+0 --> Year  
+1 --> Centre Core Health 
+2 --> States Core Health 
+3 --> Centre % GDP (Core Health)
+4 --> States % GDP (Core Health)
+5 --> Total % GDP  (Core Health)
+6 --> Centre % GDP (Broad Health)
+7 --> States % GDP (Broad Health)
+8 --> Total % GDP (Broad Health)
+
+-----------------------------
+
