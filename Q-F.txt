@@ -1,0 +1,31 @@
+
+# Question - F : GDP % for Broad Health
+
+df4 = df['Centre % GDP (Broad Health)']
+df5 = df['States % GDP (Broad Health)']
+df6 = df['Total % GDP (Broad Health)']
+
+plt.title('Question - F : GDP % for Broad Health')
+plt.xlabel("year sl. no. --- >")
+plt.ylabel("Numbers --- >")
+    
+plt.plot(df4,
+            marker=4,
+            markersize=10,
+            linestyle='dashed',
+            label="[1] Centre % GDP (Broad Health)")
+
+plt.plot(df5,
+            marker=5,
+            markersize=10,
+            linestyle='dashed',
+            label="[2] States % GDP (Broad Health)")
+            
+plt.plot(df6,
+            marker=6,
+            markersize=10,
+            linestyle='dashed',
+            label="[3] Total % GDP (Broad Health)")            
+          
+plt.legend()
+plt.show()
